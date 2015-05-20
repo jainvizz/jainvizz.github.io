@@ -1,0 +1,46 @@
+﻿<div class="MangaResultContainer">
+    <div class="row">
+        <div class="col-md-3 col-sm-3 ResultA">
+            <div>
+                <img ng-src="{{results.cover}}" alt="Manga Cover" class="img-responsive" />
+            </div>
+        </div>
+        <div class="col-md-9 col-sm-9 ResultB">
+            <div>
+                <div class="divInfo1" ng-show="results.name">
+                    <span class="spnLeft">Name: </span><span class="spnRight">{{results.name}}</span></div>
+                <div class="divInfo1" ng-show="results.yearOfRelease">
+                    <span class="spnLeft">Year: </span><span class="spnRight">{{results.yearOfRelease}}</span></div>
+                <div class="divInfo1" ng-show="results.status">
+                    <span class="spnLeft">Status: </span><span class="spnRight">{{results.status}}</span></div>
+                <div class="divInfo1" ng-show="results.lastUpdate">
+                    <span class="spnLeft">Last upated: </span><span class="spnRight">{{results.lastUpdate
+                        | date}}</span></div>
+            </div>
+            <div>
+                <div class="divInfo1" ng-show="results.author">
+                    <span class="spnLeft">Author: </span><span class="spnRight">{{results.author}}</span></div>
+                <div class="divInfo1" ng-show="results.artist">
+                    <span class="spnLeft">Artist: </span><span class="spnRight">{{results.artist}}</span></div>
+                <div class="divInfo1" ng-show="results.genres">
+                    <span class="spnLeft">Genres: </span><span class="spnRight">{{results.genres}}</span></div>
+            </div>
+            <div ng-show="results.info">
+                <span class="spnLeft">Description: </span><span class="spnRight">{{results.info}}</span></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 col-sm-3 divChapContainer">
+            <span>Chapters</span>
+            <div>
+                <ul class="ChapIndex" ng-class="{scroll: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
+                    <li ng-repeat="item in results.chapters"><a ng-click="getChap({ChapterId: item.chapterId})"
+                        href="">Chapter {{item.chapterId}} </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 col-sm-9">
+            <img ng-src="{{ chapResults.pages[0].url }}" class="img-responsive imgFirstPage" />
+        </div>
+    </div>
+</div>
