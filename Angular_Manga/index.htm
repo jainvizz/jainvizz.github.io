@@ -15,7 +15,7 @@
             <div class="container">
                 <div class="row" ng-show="showSearch">
                     <div class="col-md-12 col-sm-12">
-                        <manga-search results="MangaList" search="SearchManga(selectedManga)"></manga-search>
+                        <manga-search results="MangaList" search="SearchManga(selectedManga)" find="StartFind(userEntered)" stop="StopFind()"></manga-search>
                     </div>
                 </div>
                 <a ng-click="goBack()" href="" ng-show="showBack" id="lnkGoBack">Back to search</a>
