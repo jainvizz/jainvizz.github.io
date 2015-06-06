@@ -1,9 +1,11 @@
-﻿app.directive("mangaSearch", function () {
+app.directive("mangaSearch", function () {
     return {
         restrict: 'E',
         scope: {
             results: '=',
-            search: '&'
+            search: '&',
+            find: '&',
+            stop:'&'
         },
         replace: true,
         templateUrl: 'directives/mangaSearch.htm'
