@@ -1,7 +1,7 @@
-﻿<div class="MangaSearchContainer">
-    <input list="browsers" id="txtMangaSearch" ng-model="textValue" ng-keyup="$event.keyCode == 13 ? search({selectedManga:textValue}) : null">
+<div class="MangaSearchContainer">
+    <input list="browsers" id="txtMangaSearch" ng-model="textValue" ng-keyup="find({userEntered:textValue})" ng-keydown="stop()">
     <datalist id="browsers">
-        <option ng-repeat="optionValue in results | limitTo:20" value="{{optionValue.mangaId}}">{{optionValue.name}}</option>
+        <option ng-repeat="optionValue in results" value="{{optionValue.mangaId}}">{{optionValue.name}}</option>
     </datalist>
     <br />
     <input type="button" id="btnMangaSearch" ng-click="search({selectedManga:textValue})" value="Search" />
