@@ -1,18 +1,29 @@
-﻿app.controller("MainController", ["$scope", "MangaList", "MangaFind", "MangaChapter", function ($scope, MangaList, MangaFind, MangaChapter) {
+var userTimer = 0;
+var TypingCompleted = 3000;
+app.controller("MainController", ["$scope", "MangaList", "MangaFind", "MangaChapter", function ($scope, MangaList, MangaFind, MangaChapter) {
     $scope.showSearch = true;
     $scope.showResult = false;
     $scope.showBack = false;
     $scope.showProcess = false;
-    MangaList.success(function (data) {
-        $scope.MangaList = [];
-        if (data != null) {
-            data.map(function (value) {
-                if (value.name.match(/^[A-Za-z]+$/)) {
-                    $scope.MangaList.push(value);
+    $scope.StartFind = function (UserString) {
+        clearTimeout(userTimer);
+        userTimer = setTimeout(function () {
+            MangaList.fnParams(UserString).success(function (data) {
+                $scope.MangaList = [];
+                if (data != null && data.length != 0) {
+                    //                    data.map(function (value) {
+                    //                        if (value.name.match(/^[A-Za-z]+$/)) {
+                    //                            $scope.MangaList.push(value);
+                    //                        }
+                    //                    });
+                    $scope.MangaList = data;
                 }
             });
-        }
-    });
+        }, TypingCompleted);
+    };
+    $scope.StopFind = function () {
+        clearTimeout(userTimer);
+    };
     $scope.SearchManga = function (SearchItem) {
         $scope.SearchComic = SearchItem;
         MangaFind.fnParams(SearchItem).success(function (data) {
