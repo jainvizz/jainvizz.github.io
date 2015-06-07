@@ -50,6 +50,7 @@ input::-webkit-calendar-picker-indicator {
     opacity: 0;
 }
 
+/*
 .main #txtMangaSearch
 {
   width: 40%;
@@ -62,6 +63,7 @@ input::-webkit-calendar-picker-indicator {
   border-radius: 3px 3px;
   font-size: 125%;
 }
+*/
 
 .main #browsers 
 {
