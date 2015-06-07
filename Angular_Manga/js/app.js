@@ -1,1 +1,1 @@
-﻿var app = angular.module("mangaApp", []);
+var app = angular.module("mangaApp", ['autocomplete']);
