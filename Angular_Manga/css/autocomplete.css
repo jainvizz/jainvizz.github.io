@@ -10,6 +10,9 @@
   font-size: 1.2em;
   width: 100%;
   padding:0.4em;
+  -webkit-border-radius: 3px 3px;
+  -moz-border-radius: 3px 3px;
+  border-radius: 3px 3px;
 }
 
 .autocomplete ul{
