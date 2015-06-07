@@ -5,7 +5,7 @@ app.controller("MainController", ["$scope", "$timeout", "MangaList", "MangaFind"
     $scope.showResult = false;
     $scope.showBack = false;
     $scope.showProcess = false;
-   $scope.StartFind = function (UserString) {
+    $scope.StartFind = function (UserString) {
         $timeout.cancel(userTimer);
         if (UserString != '') {
             userTimer = $timeout(function () {
