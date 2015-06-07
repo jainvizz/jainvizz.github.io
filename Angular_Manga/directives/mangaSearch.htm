@@ -1,8 +1,9 @@
 <div class="MangaSearchContainer">
-    <input list="browsers" id="txtMangaSearch" ng-model="textValue" ng-keyup="find({userEntered:textValue})" ng-keydown="stop()">
+    <autocomplete ng-model="textValue" data="results" ng-keyup="find({userEntered:textValue})" attr-input-id="txtMangaSearch" ng-keydown="stop()" selected-comic="comicValue"></autocomplete>
+   <!-- <input list="browsers" id="txtMangaSearch" ng-model="textValue" ng-keyup="find({userEntered:textValue})" ng-keydown="stop()">
     <datalist id="browsers">
         <option ng-repeat="optionValue in results" value="{{optionValue.mangaId}}">{{optionValue.name}}</option>
-    </datalist>
+    </datalist>-->
     <br />
-    <input type="button" id="btnMangaSearch" ng-click="search({selectedManga:textValue})" value="Search" />
+    <input type="button" id="btnMangaSearch" ng-click="search({selectedManga:comicValue})" value="Search" />
 </div>
