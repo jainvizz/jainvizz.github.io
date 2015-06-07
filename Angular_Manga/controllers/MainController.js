@@ -1,5 +1,5 @@
 var userTimer = 0;
-var TypingCompleted = 1000;
+var TypingCompleted = 500;
 app.controller("MainController", ["$scope", "$timeout", "MangaList", "MangaFind", "MangaChapter", function ($scope, $timeout, MangaList, MangaFind, MangaChapter) {
     $scope.showSearch = true;
     $scope.showResult = false;
