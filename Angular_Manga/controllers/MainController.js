@@ -1,13 +1,13 @@
 var userTimer = 0;
 var TypingCompleted = 3000;
-app.controller("MainController", ["$scope", "MangaList", "MangaFind", "MangaChapter", function ($scope, MangaList, MangaFind, MangaChapter) {
+app.controller("MainController", ["$scope", "$timeout", "MangaList", "MangaFind", "MangaChapter", function ($scope, $timeout, MangaList, MangaFind, MangaChapter) {
     $scope.showSearch = true;
     $scope.showResult = false;
     $scope.showBack = false;
     $scope.showProcess = false;
     $scope.StartFind = function (UserString) {
-        clearTimeout(userTimer);
-        userTimer = setTimeout(function () {
+        $timeout.cancel(userTimer);
+        userTimer = $timeout(function () {
             MangaList.fnParams(UserString).success(function (data) {
                 $scope.MangaList = [];
                 if (data != null && data.length != 0) {
@@ -22,7 +22,7 @@ app.controller("MainController", ["$scope", "MangaList", "MangaFind", "MangaChap
         }, TypingCompleted);
     };
     $scope.StopFind = function () {
-        clearTimeout(userTimer);
+        $timeout.cancel(userTimer);
     };
     $scope.SearchManga = function (SearchItem) {
         $scope.SearchComic = SearchItem;
