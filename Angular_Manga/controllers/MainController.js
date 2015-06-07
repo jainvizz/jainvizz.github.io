@@ -7,19 +7,21 @@ app.controller("MainController", ["$scope", "$timeout", "MangaList", "MangaFind"
     $scope.showProcess = false;
     $scope.StartFind = function (UserString) {
         $timeout.cancel(userTimer);
-        userTimer = $timeout(function () {
-            MangaList.fnParams(UserString).success(function (data) {
-                $scope.MangaList = [];
-                if (data != null && data.length != 0) {
-                    //                    data.map(function (value) {
-                    //                        if (value.name.match(/^[A-Za-z]+$/)) {
-                    //                            $scope.MangaList.push(value);
-                    //                        }
-                    //                    });
-                    $scope.MangaList = data;
-                }
-            });
-        }, TypingCompleted);
+        if (UserString != '') {
+            userTimer = $timeout(function () {
+                MangaList.fnParams(UserString).success(function (data) {
+                    $scope.MangaList = [];
+                    if (data != null && data.length != 0) {
+                        //                    data.map(function (value) {
+                        //                        if (value.name.match(/^[A-Za-z]+$/)) {
+                        //                            $scope.MangaList.push(value);
+                        //                        }
+                        //                    });
+                        $scope.MangaList = data;
+                    }
+                });
+            }, TypingCompleted);
+        }
     };
     $scope.StopFind = function () {
         $timeout.cancel(userTimer);
