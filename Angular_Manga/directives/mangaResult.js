@@ -16,6 +16,11 @@
                     scope.imageLoad = false;
                 });
             });
+            targetElem.bind('error', function () {
+                scope.$apply(function () {
+                    scope.imageLoad = false;
+                });
+            });
         }
     }
 }); 
