@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>SASS: The Basics</title>
+    <link href="styles/styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="impress-not-supported">
+    <div class="fallback-message">
+        <p>
+            Your browser <b>doesn't support the features required</b> by impress.js, so you
+            are presented with a simplified version of this presentation.</p>
+        <p>
+            For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b>
+            browser.</p>
+    </div>
+    <div id="impress" class="DivSASS">
+        <div class="step slide" data-x="0" data-y="1500">
+            <b>SASS: The Basics</b>
+            <img class="imgSass" src="http://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg" />
+            <br />
+            <br />
+            <b>...CSS with superpowers</b>
+            <br />
+            <br />
+            <br />
+            <br />
+            <b>By: Rahul Jain</b>
+        </div>
+        <div class="step slide" data-x="1000" data-y="1500">
+            <b>Contents</b>
+            <img class="imgSass" src="http://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg"
+                alt="sass logo" />
+            <ul>
+                <li>1. Introduction</li>
+                <li>9. Using Lists and @each</li>
+                <li>2. Diff. between Less and Sass</li>
+                <li>10. If else conditions</li>
+                <li>3. How to install Sass?</li>
+                <li>11. Built in Functions</li>
+                <li>4. Variables in Sass</li>
+                <li>12. For Loops</li>
+                <li>5. Nesting your Sass</li>
+                <li>13. While Loops</li>
+                <li>6. Using Mixins</li>
+                <li>14. Resources</li>
+                <li>7. Selector Inheritance</li>
+                <li>15. Queries</li>
+                <li>8. @import and Parent Reference</li>
+            </ul>
+        </div>
+        <div class="step slide" data-x="2000" data-y="1500">
+            <b>Introduction</b>
+            <img class="imgSass" src="http://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg"
+                alt="sass logo" />
+            <br />
+            <br />
+            <p>
+                Sass stands for "Syntactically Awesome Style Sheets".</p>
+            <br />
+            <p>
+                Sass is a scripting language (Preprocessor) that is interpreted into Cascading Style
+                Sheets (CSS).</p>
+            <br />
+            <p>
+                Sass is the most mature, stable, and powerful professional grade CSS extension language
+                in the world.</p>
+        </div>
+        <div class="step slide" data-x="3000" data-y="1500">
+            <b>Sass Vs Less</b>
+            <img class="imgSass" src="http://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg"
+                alt="sass logo" />
+            <img src="http://media02.hongkiat.com/sass-vs-less/sass-less-cover.jpg" alt="sass vs less"
+                style="display: block; margin: 50px auto;" />
+        </div>
+        <div class="step slide" data-x="4000" data-y="1500">
+            <b>Installing Sass</b>
+            <img class="imgSass" src="http://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg"
+                alt="sass logo" />
+            <br />
+            <br />
+            <div style="text-align: center; margin: 20% auto;">
+                <a href="http://www.zingdesign.com/the-sass-and-compass-tutorial-for-absolute-beginners/"
+                    target="_blank">How to install Sass?</a>
+            </div>
+        </div>
+        <div class="step slide" data-x="5000" data-y="1500">
+            <b>Variables in Sass</b>
+            <img class="imgSass" src="http://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg"
+                alt="sass logo" />
+            <br />
+            <br />
+            <p>
+                Sass supports two types of variables:
+                <br />
+                <br />
+                1. Global variables<br />
+                2. Local variables</p>
+        </div>
+        <div class="step slide" data-x="6000" data-y="1500">
+            <b>Nesting your Sass</b>
+            <img class="imgSass" src="http://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg"
+                alt="sass logo" />
+            <br />
+            <br />
+            <p>
+                &#9672; Nesting allows you to write selectors that mimic the structure of your HTML.<br />
+                <br />
+                &#9672; This allows you to use shortcuts to create your CSS.<br />
+                <br />
+                &#9672; Nesting can extend as many levels deep as you wish.
+            </p>
+        </div>
+        <div class="step slide" data-x="7000" data-y="1500">
+            <b>Using Mixins</b>
+            <img class="imgSass" src="http://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg"
+                alt="sass logo" />
+            <br />
+            <br />
+            <p>
+                &#9672; Mixins are like functions.<br />
+                <br />
+                &#9672; Mixins allow you to define styles that can be re-used throughout the stylesheet.<br />
+                <br />
+                &#9672; They can even take arguments which allows you to produce a wide variety
+                of styles.</p>
+        </div>
+        <div class="step slide" data-x="8000" data-y="1500">
+            <b>Selector Inheritance</b>
+            <img class="imgSass" src="http://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg"
+                alt="sass logo" />
+            <br />
+            <br />
+            <p>
+                &#9672; Provides a simple way to allow a selector to inherit the styles of another
+                one<br />
+                <br />
+                &#9672; One class can have all the styles of another class, as well as its own specific
+                styles
+            </p>
+        </div>
+        <div class="step slide" data-x="9000" data-y="1500">
+            <b>@import & Parent Reference</b>
+            <img class="imgSass" src="http://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg"
+                alt="sass logo" />
+            <br />
+            <br />
+            <p>
+                &#9672; A partial is a file that contains some of your Sass. We use partials to
+                organize our work.<br />
+                <br />
+                &#9672; In Sass, & references the parent selector of a declaration block, allowing
+                the selector to be referenced from within itself.
+            </p>
+        </div>
+        <div class="step slide" data-x="10000" data-y="1500">
+            <b>Using Lists and @each</b>
+            <img class="imgSass" src="http://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg"
+                alt="sass logo" />
+            <br />
+            <br />
+            <p>
+                The @each directive takes the form @each $var in &lt;list&gt;.</p>
+            <pre style="background: #f0f2f4;">
+            $list: (red, pink, black, yellow, blue);
+
+            @each $author in $list{
+              .photo-#{$author} {
+                color: #{$author};
+              }
+            } 
+            </pre>
+        </div>
+        <div class="step slide" data-x="11000" data-y="1500">
+            <b>If else conditions</b>
+            <img class="imgSass" src="http://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg"
+                alt="sass logo" />
+            <br />
+            <br />
+            <p>
+                The @if control directive takes a SassScript expression and processes its block
+                of styles if the expression returns anything other than false.</p>
+                <br />
+                <pre style="background: #f0f2f4;">
+                @if $i == 1 {
+                     /* ..... */           
+                }@else if $i > 1 and $i < 6 {
+                    /* ..... */ 
+                }@else if $i == 6{
+                    /* ..... */
+                }
+                </pre>
+        </div>
+        <div class="step slide" data-x="12000" data-y="1500">
+            <b>Built in Functions</b>
+            <img class="imgSass" src="http://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg"
+                alt="sass logo" />
+            <br />
+            <br />
+            <p>
+                Sass comes with some build in functions. Some of them provided below:<br />
+                <br />
+                1. Fade-out<br />
+                <br />
+                2. Percentage<br />
+                <br />
+                3. Round etc.</p>
+        </div>
+        <div class="step slide" data-x="13000" data-y="1500">
+            <b>For Loops</b>
+            <img class="imgSass" src="http://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg"
+                alt="sass logo" />
+            <br />
+            <br />
+            <p>
+                The @for directive comes in two forms.<br />
+                <br />
+                1. The first option is @for $var from &lt;start&gt; through &lt;end&gt;
+                <br />
+                <br />
+                2. The second option is @for $var from &lt;start&gt; to &lt;end&gt;</p>
+        </div>
+        <div class="step slide" data-x="14000" data-y="1500">
+            <b>While Loops</b>
+            <img class="imgSass" src="http://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg"
+                alt="sass logo" />
+            <br />
+            <br />
+            <pre style="background: #f0f2f4;">
+                $types: 4;
+                $type-width: 20px;
+
+                @while $types > 0{
+                  .div-#{$types}
+                  {
+                  width: $type-width + $types
+                  }
+                  $types: $types - 1
+                }
+            </pre>
+        </div>
+        <div class="step slide" data-x="15000" data-y="1500">
+            <b>Resources...</b>
+            <img class="imgSass" src="http://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg"
+                alt="sass logo" />
+            <br />
+            <br />
+            <p>
+                Below are some of the popular resources for your reference:</p>
+            <br />
+            <ul>
+                <li><a target="_blank" href="http://sass-lang.com/">http://sass-lang.com/</a>
+                <li><a target="_blank" href="http://leveluptuts.com/tutorials/sass-tutorials">http://leveluptuts.com/tutorials/sass-tutorials</a></li>
+                <li><a target="_blank" href="https://www.codeschool.com/courses/assembling-sass">https://www.codeschool.com/courses/assembling-sass</a></li>
+                <li><a target="_blank" href="http://thesassway.com/guides">http://thesassway.com/guides</a></li>
+                <li><a target="_blank" href="https://css-tricks.com/sass-style-guide/">https://css-tricks.com/sass-style-guide/</a></li>
+            </ul>
+        </div>
+        <div class="step slide" data-x="16000" data-y="1500">
+            <b>Queries</b>
+            <img class="imgSass" src="http://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg"
+                alt="sass logo" />
+            <br />
+            <br />
+            <img alt="queries" src="http://foodsafetyhelpline.com/wp-content/uploads/2015/01/Queries-From-Discussion-Forums1.jpg"
+                style="height: 350px; display: block; margin: 0 auto;" />
+        </div>
+    </div>
+    <script src="scripts/impress.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        impress().init();
+    </script>
+</body>
+</html>
